@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DAY01 - JAVASCRIPT CORE - Good Code vs Bad Code</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!-- Bad Code -->
+	<button 
+	onclick="body.style.background='#E834B3';" 
+	style="background:#2067FF; color:#fff; border-radius:4px; border:none;"
+	type="button">inline-style button</button>
+
+	<!-- Good Code : css, js 분리 -->
+	<button type="button" id="target">css-js-분리 button</button>
+	<script src="js/app.js"></script>
+</body>
+</html>

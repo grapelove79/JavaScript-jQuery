@@ -58,4 +58,5 @@ console.log('d의 값은', d); // Object {x: 10}
 a = 100, b = 200, c.x = 300;
 console.log('a의 값은', a); // 100
 console.log('b의 값은', b); // 200
+console.log('c의 값은', c); // Object {x: 300}
 console.log('d의 값은', d); // Object {x: 300}

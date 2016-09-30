@@ -113,16 +113,24 @@ document.getElementById('target').onclick = function() {
 
 ### 자바스크립트 데이터 유형(Data type) 
 #### 원시 데이터 유형(primitive type)
+: 값이 그대로 복사되는 자료형
+
 - 숫자 (Number) : 2016
 - 문자 (String) : '푸르고 깊은 바다', "Design is All. All is Design."
 - 불리언 (Boolean, 논리) : true, falae
+- undefined
+- null
 
 #### 복합 데이터 유형(reference type)
+: 값의 주소(메모리에서 값이 있는 곳을 가리키는 값)만 복사되는 자료형. 
+
 - 배열 (Array)
 - 함수 (Function)
 - 객체 (Object)
 
 ### 변수에 데이터 값 할당: 복사 vs 참조
+: 변수(Variable)에 값이 할당된다라는 것은 값의 유형(Data Type)에 따라 `복사`하거나, `참조`하게 된다.
+
 ```javascript
 var a = 10, 
 	b = a,
@@ -137,5 +145,6 @@ console.log('d의 값은', d); // Object {x: 10}
 a = 100, b = 200, c.x = 300;
 console.log('a의 값은', a); // 100
 console.log('b의 값은', b); // 200
+console.log('c의 값은', c); // Object {x: 300}
 console.log('d의 값은', d); // Object {x: 300}
 ```

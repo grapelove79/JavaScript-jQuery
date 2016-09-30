@@ -3,12 +3,12 @@
 ## DAY 01
 
 ### 0. 브라우저를 구성하는 객체 
-#### 기존에 존재하던 객체들
-- window 객체
-- window location 객체
-- window navigator 객체
-- window document 객체
-- window history 객체
+#### 기존에 존재하던 객체들 (window 객체)
+- window.location 객체
+- window.screen 객체 
+- window.navigator 객체
+- window.document 객체
+- window.history 객체
  
 #### HTML5에 추가된 객체들
 - window.navigator.geolocation 객체

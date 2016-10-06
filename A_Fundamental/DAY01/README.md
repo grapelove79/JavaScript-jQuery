@@ -121,7 +121,7 @@ document.getElementById('target').onclick = function() {
 - undefined
 - null
 
-#### 복합 데이터 유형(reference type)
+#### 복합 데이터 유형(reference type) [객체(Objcet)]
 : 값의 주소(메모리에서 값이 있는 곳을 가리키는 값)만 복사되는 자료형. 
 
 - 배열 (Array)
@@ -134,7 +134,7 @@ document.getElementById('target').onclick = function() {
 ```javascript
 var a = 10, 
 	b = a,
-	c = { x: a},
+	c = { x : a}, // c는 객체, 'x:a'
 	d = c;
 
 console.log('a의 값은', a); // 10

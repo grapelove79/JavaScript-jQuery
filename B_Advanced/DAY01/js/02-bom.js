@@ -105,15 +105,11 @@
 // window.onresize = assignClassDetection;
 
 /**
- * --------------------------------------------------------
- * ex3. 메모이제이션(Memoization) 
- * 함수에 속성을 추가하여 결과(반환 값)를 캐시(Cache)해두면 
- * 다음 호출 시점에 복잡한 연산을 반복하지 않아 효율적으로 활용할 수 있다. 
- * 이런 활용 법을 메모이제이션 패턴이라고 한다.
- * --------------------------------------------------------
- * 아래 코드는 최신브라우저에서만 동작됨.
+ * --------------------------------
+ * ex3. 메모이제이션
  * 크로스브라우징 이슈가 있다. 
- * --------------------------------------------------------
+ * 아래 코드는 최신브라우저에서만 동작됨.
+ * --------------------------------
  */
 
 var html = document.documentElement;
@@ -128,7 +124,7 @@ function assignClassDetection() {
     // <html> 요소의 class 속성 값을 가져온다.
     var html_class = html.getAttribute('class');
     var current_class = detectDeviceType();
-    if( !html_class || assignClassDetection.old_class === current_class ) { return; } // 함수 종료
+    if(!html_class || assignClassDetection.old_class === current_class ) { return; } // 함수 종료
     // console.log('try code');
 
     // [단계1] 기존 클래스 속성 값을 제거한다.

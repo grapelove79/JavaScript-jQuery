@@ -21,11 +21,6 @@ var body = document.getElementsByTagName('body').item(0); // XML DOM 방식
 var body = document.body; // HTML DOM 방식
 ```
 
-> e.g.) nodelist 안에서 아이템(item)을 빼오려면 `.item()` 메소드를 사용 
-(아래 코드는 동일하나 'B' 실무에서 많이 사용됨)
-var links  = document.getElementsByTagName('a').item(1); --- A
-var links  = document.getElementsByTagName('a').[1];     --- B
-
 ### DOM API
 - appendChild : 부모노드.appendChild(자식노드)
 - insertBefore: 목표노드.부모노드.insertBefore(삽입노드, 목표노드);

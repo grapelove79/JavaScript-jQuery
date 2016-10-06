@@ -51,10 +51,10 @@ window.onload = initialization;
 > `window.onload = initialization();` => window가 로드되기 전에 `initialization()`함수가 실행이 되어지므로 `()` 함수 호출을 붙이지 않는다. 
 
 ## 변수(Variable) VS 상수(Constant)
-- 변수는 실행 중인 상황에서 값을 변경할 수 있다.
-- 상수는 실행 중인 상황에서 값을 변경할 수 없다.
-- 변수와 구분하기 위한 목적으로 상수의 이름은 모두 대문자로 작성 표기한다.
-- 상수를 공식적으로 지원하는 것은 `ECMAScript 2015` 버전부터 지원.와 구분하기 위한 목적으로 상수의 이름은 모두 대문자로 작성 표기한다.
+- `변수`는 실행 중인 상황에서 값을 변경할 수 있다.
+- `상수`는 실행 중인 상황에서 값을 변경할 수 없다.
+- 변수와 구분하기 위한 목적으로 `상수의 이름`은 `모두 대문자`로 작성 표기.
+- 상수를 공식적으로 지원하는 것은 `ECMAScript 2015` 버전부터 지원.
 
 ```javascript
 var bim_project = 'LG Bim';
@@ -136,7 +136,7 @@ var onClick = doc.onclick = function() {
 }
 
 doc.onclick = onClick;
-doc.onclick = onClick(); // 'onClick()'바로 실행이 되므로 오류 
+// doc.onclick = onClick(); => 사용자가 'document'를 클릭했을 때, 이벤트가 실행이 되어야 하는데. onClick()'바로 실행이 되므로 오류다.
 ```
 
 ## 문서 객체 제어

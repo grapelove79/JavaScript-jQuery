@@ -106,10 +106,12 @@ window.parseInt('20.3%', 10); // 20
 window.parseFloat('20.3%', 10); // 20.3
 ```
 
-### Event
+## Event
 - 이벤트 속성에 함수를 연결하는 것을 이벤트 바인딩 한다. (Event property, handler, binding)
 - [추가, 연결] 이벤트 속성에 함수(핸들러)를 설정
 - [제거] 이벤트 속성에 초기 값인 null을 대입
+
+### 이벤트 추가, 연결, 제거
 
 ```javascript
 // 이벤트 초기 상태 = null
@@ -124,7 +126,7 @@ document.onclick = function() {
 document.onclick = null
 ```
 
-#### 1회만 클릭 수행.(클릭과 동시에 이벤트 제거)
+### 1회만 클릭 수행.(클릭과 동시에 이벤트 제거)
 
 ```javascrpt
 var doc = document;
@@ -138,7 +140,6 @@ doc.onclick = onClick(); // 'onClick()'바로 실행이 되므로 오류
 ```
 
 ## 문서 객체 제어
-
 ### 표준 방식 VS 비표준 방식
 
 ```javascrpt

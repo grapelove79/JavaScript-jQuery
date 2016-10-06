@@ -134,8 +134,8 @@ document.getElementById('target').onclick = function() {
 ```javascript
 var a = 10, 
 	b = a,
-	c = { x : a}, // c는 객체, 'x:a'
-	d = c;
+	c = { x : a }, // c는 객체, x는 문자형
+	d = c; // c에 참조된 객체를 d도 참조함.
 
 console.log('a의 값은', a); // 10
 console.log('b의 값은', b); // 10 

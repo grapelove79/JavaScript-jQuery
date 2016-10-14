@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="UTF-8">
+<title>3일차</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="dom_helper/dom_helper.js"></script>
+</head>
+<body>
+<!-- 이것은 주석노드입니다. -->
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+		<!-- 마크업 사례1 : 한줄로 쓴 경우 -->
+			<h3 id="heading_3"><a href="#" id="hyperlink">Col</a><a name="umn">umn</a></h3>
+		<!-- 마크업 사례2 : 개행된 경우-->
+			<h3 id="heading-3">
+				<a id="hyperlink" href="">Col</a>
+				<a id="named-anchor" name="umn">umn</a>
+			</h3>
+			<img src="http://placehold.it/400x200/000/fff/?text=about contents" alt="img">
+			<!-- <div role="img" class="ir" aria-label="배경이미지 설명"></div> -->
+		</div>
+	</div>
+</div>
+
+<div data-cutom-attr="this is custom attribute." id="element" title="요소" class="hi col-6"></div>
+<div class="col-6 there"></div>
+<div class="col-6 wow"></div>
+<div class="todo col-6 good"></div>
+
+<script src="js/DOM-API.js"></script>
+<script src="js/DOM-nodeName.js"></script>
+<script src="js/DOM-traversal.js"></script>
+</body>
+</html>

@@ -40,7 +40,7 @@ console.log( !!un );  // false
 ```
 
 #### '!!'를 데이터 앞에 붙여주는 것 (애용)
-- undefined, null 데이터 유형 변경 방법
+##### undefined, null 데이터 유형 변경 방법
 - [문자] 'null', undefined + '', String(null)
 - [불리언] !null, !!undefined
 - [숫자] null + 9 => 9, Number(null)
@@ -232,22 +232,12 @@ console.log('typeof undefined', undefined); // undefined
 ```
 
 ### typeof instanceof
-- 설계 도면(class, 생성자(constructor)) 
-ㄴ> ex.) 'sketch' Symbols
-- 조각(실체화된 객체) instance 
-ㄴ> 생성자 함수를 사용하여 생성한 객체
+- 설계 도면(클래스(Class), 생성자(constructor)) : ex.) 'sketch' Symbols
+- 조각(실체화된 객체) instance : 생성자 함수를 사용하여 생성한 객체
+- 인스턴스 instanceof 원형(모체) : return BOOLEAN {true, false}
 
 ```javascript
 var playlist = new Array();
 console.log(typeof playlist); //object => 데이터 유형이 제대로 체크가 되지 않아. 'instanceof'를 사용하면 제대로 나온다.
 console.log(playlist instanceof Array); //true
 ```
-
-
-
-
-
-
-
-
-

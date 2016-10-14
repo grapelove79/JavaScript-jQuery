@@ -68,7 +68,7 @@ HOUR_T0_MINIUTE = '60분' 		  // 오류 발생
 ```
 
 ## 자바스크립트의 데이터 유형 변경(형 변환, Change Data Type)
-### Number -> String
+### Number -> String (숫자 -> 문자)
 ```javascript
 // 방법1. 앞, 뒤에 홀따옴표(''), 쌍따옴표("")를 추가하는 경우
 '10', '2013'
@@ -85,7 +85,7 @@ count.toString(); // '10'
 String(count);
 ```
 
-### String(Like Number) -> Number
+### String(Like Number) -> Number (문자[숫자] -> 숫자 )
 ```javascript
 // 방법1. 숫자형 문자 뒤에 0을 빼거나, 1을 곱하거나 나눈다.
 '450' - 0, '390' * 1, '-123' / 1
@@ -97,7 +97,7 @@ String(count);
 Number('89790');
 ```
 
-### String(Like Unit) -> Number
+### String(Like Unit) -> Number (문자[단위] -> 숫자 -> 산술연산 -> 문자[단위])
 ```javascript
 // 방법1. parseInt() 함수에 단위 유형의 문자를 전달한다. -> 정수(Integer)를 반환
 window.parseInt('20.3%', 10); // 20
@@ -144,7 +144,7 @@ doc.onclick = onClick;
 
 ```javascrpt
 // 표준 방식(Microsoft Non Standard Method) 
-var current_fontSize = window.getComputedStyle(h1).fontSize;
+window.getComputedStyle(h1).fontSize;
 
 // 비표준 방식(Microsoft Non Standard Method)
 h1.currentStyle.fontSize;

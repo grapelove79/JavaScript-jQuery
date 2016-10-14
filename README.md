@@ -16,7 +16,6 @@
 	- Event
 	- 문서 객체 제어
 
-`
 ##Advanced
 - [DAY01](./B_Advanced/DAY01/README.md) 
 	- 자바스크립트를 사용하여 동적으로 코드 생성/추가

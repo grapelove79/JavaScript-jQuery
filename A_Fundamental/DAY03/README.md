@@ -52,11 +52,11 @@ console.log( !!un );  // false
 	- 배열 객체 (Array Ojbect)
 	- 함수 객체 (Fucntion Ojbect)
 
-## 함수 객체 (Fucntion Ojbect)
+### 함수 객체 (Fucntion Ojbect)
 - 이름이 있는 함수(기명 함수) VS 이름이 없는 함수 (무명, 익명 함수)
 - 함수 선언식(Function declaration) VS 함수 표현식(Function expression)
 
-### 함수 리터럴과 간단한 문서객체 제어
+#### 함수 리터럴과 간단한 문서객체 제어
 - [STEP 1] .content 요소를 선택하여 화면에서 보이지 않도록 만든다.
 - [STEP 2] 문서에서 .btn-show-content 버튼을 선택한다.
 - [STEP 3] 선택한 버튼을 사용자가 클릭하면 .content요소를 화면에 보이게 만든다.

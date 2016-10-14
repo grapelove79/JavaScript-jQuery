@@ -15,6 +15,13 @@
 		- String(Like Unit) -> Number
 	- Event
 	- 문서 객체 제어
+- [DAY03](./A_Fundamental/DAY03/README.md)
+	- 데이터 유형 변경
+	- 올바른 데이터 유형을 체크하는 방법
+		- typeof() vs instanceof
+
+
+---
 
 ##Advanced
 - [DAY01](./B_Advanced/DAY01/README.md) 
@@ -27,3 +34,8 @@
 		- window.location
 	- Closure
 	- IIFE 패턴(즉시 실행되는 함수)
+- [DAY03](./B_Advanced/DAY03/README.md)
+	- DOM API
+	- 왜 개발자는 class 속성을 사용하지 말라고 말했나?
+	- 요소노드 골라내기
+	- queryAll(), query() 헬퍼함수

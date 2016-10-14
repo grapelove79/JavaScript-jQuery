@@ -7,6 +7,44 @@
 - 방법 1. Boolean() 함수 사용
 - 방법 2. '!!'를 데이터 앞에 붙여주는 것 (애용)
 
+#### 방법1. Boolean() 함수 사용
+```javascrpt
+var num = 101,
+	str = 'variable vs constant',
+	nu  = null,
+	un; //undefined
+
+console.log('num', num);
+console.log('num', typeof num);
+console.log('str', str);
+console.log('str', typeof str);
+console.log('nu', nu);
+console.log('nu', typeof nu); // 설계 오류!!! null은 객체가 아님에도 typeof로 결과를 출력했을 때 객체(Object)라고 결과를 반환한다.
+console.log('un', un);
+console.log('un', typeof un);
+
+console.log( Boolean(num) ); // true
+console.log( Boolean(str) ); // true
+console.log( Boolean(nu) );  // false
+console.log( Boolean(un) );  // false
+
+console.log( !num ); // !true -> false
+console.log( !str ); // !true -> false
+console.log( !nu );  // !false -> true
+console.log( !un );  // !false -> true
+
+console.log( !!num ); // true
+console.log( !!str ); // true
+console.log( !!nu );  // false
+console.log( !!un );  // false
+```
+
+#### '!!'를 데이터 앞에 붙여주는 것 (애용)
+- undefined, null 데이터 유형 변경 방법
+- [문자] 'null', undefined + '', String(null)
+- [불리언] !null, !!undefined
+- [숫자] null + 9 => 9, Number(null)
+
 ## Function
 - 참조형 데이터 : 변수의 값을 할당할 경우 복사가 아닌, 값 참조가 수행된다 
 - 참조가 되는 데이터 유형은 객체이다.
@@ -89,6 +127,7 @@ person.crying = crying; // 메소드
 ### 배열 객체(Array Object)
 - 배열 객체는 여러 개의 데이터를 기억할 수 있는 공간을 제공하는 객체이다.
 - 생성된 배열 객체는 기억하기 위해 변수에 할당한다. 
+- 배열을 사용할 때 연관된 복수 데이터 관리 (쉽고 효율적이다.)
 
 ```javascript
 var navigation_items =[];
@@ -168,7 +207,41 @@ var css_props  = {
 delete css_props.color; // 정의한 속성 객체는 지울 수 있다.
 delete css_props; // css_props는 제거되지 않는다. css_props는 전역 변수라서.
 ```
+## 올바른 데이터 유형을 체크하는 방법
+### typeof 키워드(함수가 아님)
+- array, null: objcet로 나와 해당되는 정보 유형으로 나오지 않는다.
 
+```javascript
+var num, str, boo, fnc, arr, obj;
+
+num = 100;
+str = 'this is string';
+boo = !false;
+fnc = function() {};
+arr = [];
+obj = {};
+
+console.log('typeof num', num);				// number
+console.log('typeof str', str);				// string
+console.log('typeof boo', boo);				// boolean
+console.log('typeof fnc', fnc);				// function
+console.log('typeof arr', arr);				// object ==> array로 제대로 출력이 안된다.
+console.log('typeof obj', obj);				// object
+console.log('typeof null', null);			// object ==> null로 제대로 출력이 안된다.
+console.log('typeof undefined', undefined); // undefined
+```
+
+### typeof instanceof
+- 설계 도면(class, 생성자(constructor)) 
+ㄴ> ex.) 'sketch' Symbols
+- 조각(실체화된 객체) instance 
+ㄴ> 생성자 함수를 사용하여 생성한 객체
+
+```javascript
+var playlist = new Array();
+console.log(typeof playlist); //object => 데이터 유형이 제대로 체크가 되지 않아. 'instanceof'를 사용하면 제대로 나온다.
+console.log(playlist instanceof Array); //true
+```
 
 
 

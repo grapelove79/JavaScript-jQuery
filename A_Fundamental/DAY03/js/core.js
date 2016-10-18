@@ -16,12 +16,15 @@
 var num = 101,
 	str = 'variable vs constant',
 	nu  = null,
+	arr = [num, str, nu],
 	un; //undefined
 
 console.log('num', num);
 console.log('num', typeof num);
 console.log('str', str);
 console.log('str', typeof str);
+console.log('arr', arr);
+console.log('arr', typeof arr); // 설계 오류!!! arr은 객체가 아님에도 typeof로 결과를 출력했을 때 객체(Object)라고 결과를 반환한다.
 console.log('nu', nu);
 console.log('nu', typeof nu); // 설계 오류!!! null은 객체가 아님에도 typeof로 결과를 출력했을 때 객체(Object)라고 결과를 반환한다.
 console.log('un', un);
@@ -29,6 +32,7 @@ console.log('un', typeof un);
 
 console.log( Boolean(num) ); // true
 console.log( Boolean(str) ); // true
+console.log( Boolean(arr) ); // true
 console.log( Boolean(nu) );  // false
 console.log( Boolean(un) );  // false
 

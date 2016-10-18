@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body {
+  margin: 7rem 12rem;
+}
+body * {
+  margin: 0;
+}
+#page {
+  min-width: 28.125rem;
+  padding: 2rem;
+  background: #7045cf;
+}
+.article {
+  padding: 1.5rem;
+  background: #5ac27a;
+}
+.brand {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #ffd219;
+}
+.slogan {
+  padding: 1rem;
+  background: #fc3f57;
+}

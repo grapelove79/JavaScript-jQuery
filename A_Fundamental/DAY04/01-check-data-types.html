@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>DAY04 - 자바스크립트 데이터 유형 감지</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <script src="js/check-data-types.js"></script> -->
+	<script src="lib/my-utill.js"></script>
+	<script>
+		var html, head, body;
+
+		// 문서에서 CSS 선택자를 물어봐서 문서 요소 객체르 각 변수에 참조한다.
+		html = document.querySelector('html');
+		head = document.querySelector('head');
+		body = document.querySelector('body');
+
+		console.log('typeof html:', typeof html);
+		console.log('typeof head:', typeof head);
+		console.log('typeof body:', typeof body);
+
+		console.log('isType(html):', isDataType(html));
+		console.log('isType(head):', isDataType(head));
+		console.log('isType(body):', isDataType(body));
+
+		// if 조건문
+		// (조건)의 결과 값이 true, false 임에 따라 코드 블록문({})의 실행 여부가 결정됨.
+		if ( isDataType(html) === 'null' ) {
+			console.log('<html> 요소는 아직 생성되지 않았습니다.');
+		}
+
+		if ( isDataType(head) === 'null' ) {
+			console.log('<head> 요소는 아직 생성되지 않았습니다.');
+		}
+
+		if( isDataType(body) === 'null' ) {
+			console.log('<body> 요소는 아직 생성되지 않았습니다.');
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -19,6 +19,12 @@
 	- 데이터 유형 변경
 	- 올바른 데이터 유형을 체크하는 방법
 		- typeof() vs instanceof
+- [DAY04](./A_Fundamental/DAY04/README.md)
+	- 올바른 데이터 유형을 체크하는 방법
+	- 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
+	- 문서객체가 존재하는지 여부를 확인하는 `checkDOMElement` 헬퍼 함수
+	- 조건문(Conditional statement)
+	- console {}
 
 
 ---
@@ -39,3 +45,7 @@
 	- 왜 개발자는 class 속성을 사용하지 말라고 말했나?
 	- 요소노드 골라내기
 	- queryAll(), query() 헬퍼함수
+- [DAY04](./B_Advanced/DAY04/README.md)
+	- DOM Helper Functions
+		- Utility Helper Functions
+		- [DOM API] Selection, Creation, Manipulation

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>DAY04 - DOM API : 선텍 헬퍼 함수</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="dom_helper/dom_helper.js"></script>
+	<!-- <script src="dom_helper/dom_helper_classEls_createEl_attrs.js"></script> -->
+</head>
+<body>
+	<div id="container" lang="en">
+		<div class="wrapper">
+			<h3>Container Wrapper Element</h3>
+		</div>
+		<div class="wrapper row grid">
+			<h3>Container Wrapper Element</h3>
+		</div>
+	</div>
+
+<script>
+	// var container, wrappers, wrapper_headings;
+	// container = id('container');
+	// // wrappers  = tag('div', container);
+	// wrapper = classEls('wrapper');
+	// wrapper_headings = tag('h3', container);
+
+	// console.log(container);
+	// // console.log(wrappers);
+	// console.log(wrapper);
+	// console.log(wrapper_headings);
+
+	// // html에 class 추가
+	// // detectFeatures([
+	// // 	'margin',
+	// // 	'padding',
+	// // 	'box-shadow',
+	// // 	'refelction',
+	// // 	'flex',
+	// // 	'grid',
+	// // 	'order'
+	// // ]);
+
+	// // container에 class 추가
+ //  detectFeatures([
+ //    'backface-visibility',
+ //    'box-shadow',
+ //    'grid',
+ //    'transform-origin',
+ //    'transform-style',
+ //    'flex',
+ //    'flex-direction',
+ //    'flex-flow',
+ //    'order'
+ //  ], container);
+
+ /**
+  * ----------------------------------------
+  * [리팩토링] query, queryAll => IE8+ 사용
+  * ----------------------------------------
+  */
+	var container, wrappers, wrapper_headings;
+	container = query('#container');
+	wrapper = query('.wrapper');
+	wrapper_headings = queryAll('h3', container);
+
+	// console.log(container);
+	// console.log(wrapper);
+	// console.log(wrapper_headings);
+
+	// ex1.) html에 class 추가
+	detectFeatures([
+		'margin',
+		'padding',
+		'box-shadow',
+		'refelction',
+		'flex',
+		'grid',
+		'order'
+	]);
+
+	// ex2.) container에 class 추가
+	detectFeatures([
+		'backface-visibility',
+		'box-shadow',
+		'transform-origin',
+		'transform-style',
+		'flex',
+		'flex-direction',
+		'flex-flow',
+	], container);
+
+</script>
+</body>
+</html>

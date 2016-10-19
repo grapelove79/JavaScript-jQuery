@@ -114,7 +114,7 @@ Object.prototype.toString.call({data}).slice(8, -1); // Data
 Object.prototype.toString.call({data}).slice(8, -1).toLowerCase(); // data
 ```
 
-###3 [완성] 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
+### [완성] 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
 
 ```javascript
 function isDataType(data) {
@@ -124,7 +124,7 @@ function isDataType(data) {
 
 ---
 
-## 문서객체가 존재하는지 여부를 확인하는 헬퍼 함수
+## 문서객체가 존재하는지 여부를 확인하는 `checkDOMElement()` 헬퍼 함수
 
 ```javascript
 function checkDOMElement(element) {

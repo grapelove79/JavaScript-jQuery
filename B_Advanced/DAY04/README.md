@@ -1,10 +1,10 @@
 ###### JJ_CAMP_Advanced
 
 ## DAY 04
-## DOM Helper Function
+## DOM Helper Functions
 
 ### isDataType() 
-	Javascript의 모든 데이터 유형을 올바르게 감지할 수 있는 헬퍼 함수
+- Javascript의 모든 데이터 유형을 올바르게 감지할 수 있는 헬퍼 함수
 
 ```javascript
 function isDataType(data) {
@@ -13,7 +13,7 @@ function isDataType(data) {
 ```
 
 ### detectFeature()
-	신기술을 체크하는 헬퍼함수
+- 신기술을 체크하는 헬퍼함수
 
 ```javascript
 function detectFeature(property) {
@@ -46,6 +46,9 @@ detectFeatures.fail = function(){
   detectFeatures.element.classList.add('no-' + detectFeatures.property);
 };
 ```
+> 메모이제이션(Memoization) 패턴
+    함수에 속성을 추가하여 결과(반환 값)를 캐시(Cache)해두면 다음 호출 시점에 복잡한 연산을 반복하지 않아 효율적으로 활용할 수 있다. 
+    이런 활용 법을 `메모이제이션 패턴`이라고 한다.
 
 #### 함수 표현식 + 클로저
 
@@ -115,3 +118,24 @@ var classEls = (function() {
     }
 }());
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

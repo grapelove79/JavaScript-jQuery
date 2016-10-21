@@ -3,7 +3,7 @@
 ## DAY 04
 - 올바른 데이터 유형을 체크하는 방법
 - 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
-- 문서객체가 존재하는지 여부를 확인하는 `checkDOMElement` 헬퍼 함수
+- 문서객체가 존재하는지 여부를 확인하는 `checkDOMElement()` 헬퍼 함수
 - 조건문(Conditional statement)
 - console {}
 
@@ -52,7 +52,7 @@ console.log('num instanceof Number', num instanceof String);  // false
 console.log('num instanceof Number', num instanceof Boolean); // false
 ```
 
-### .constructor (생성자)
+### 3. .constructor (생성자)
 - 자바스크립트에 존재하는 실체화된 모든 객체(instance Object)는 기본적으로 가지고 있는 속성이다.
 - {object}.constructor 속성(Property)
 - 객체가 아닌 것들(null, undefined)에는 사용할 수 없다.
@@ -114,7 +114,7 @@ Object.prototype.toString.call({data}).slice(8, -1); // Data
 Object.prototype.toString.call({data}).slice(8, -1).toLowerCase(); // data
 ```
 
-### [완성] 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
+#### [완성] 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
 
 ```javascript
 function isDataType(data) {
@@ -172,7 +172,7 @@ else {
 
 ### 논리 연산자 (Logical Operators)
 #### 그리고(AND) && `A && B`
-: 연산자 앞의 표현식과 뒤의 표현식이 모두 참일 때 true를 반환하고 그렇지 않을 때는 false를 반환한다.
+: 연산자 앞의 표현식과 뒤의 표현식이 모두 참일 때 true를 반환하고 그렇지 않을 때는 false를 반환한다.<br>
 즉, 둘 중 하나라도 거짓이면 false를 반환한다.
 
 #### 또는(OR)	 || `A || B`
@@ -263,9 +263,8 @@ null         ===   undefined     // false
 
 ---
 
-## console {}
-
-console.log() 	: 기록하다.
-console.info() 	: 정보를 표시하다.
-console.error() : 오류를 출력하다.
+## console {} 
+console.log() 	: 기록하다.<br>
+console.info() 	: 정보를 표시하다.<br>
+console.error() : 오류를 출력하다.<br>
 console.dir() 	: 분석하다.

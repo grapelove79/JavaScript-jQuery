@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>DAY05 - 자바스크립트</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			margin: 0;
+		}
+		.box-container {
+			display: flex;
+			min-height: 100vh;
+		}
+		.box {
+			flex: 1;
+		}
+		.box a {
+			color: #fff; 
+			text-decoration: none; 
+			font-size: 2rem;
+		}
+		.box:nth-child(2n-1)  {
+			background: #FF1FF0;
+		}
+		.box:nth-child(2n) {
+			background: #1B7BFF;
+		}
+		.flex-cm		  {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box-container">
+		<div class="box flex-cm">
+			<a role="button" href="#box1">box 1</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box2">box 2</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box3">box 3</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box4">box 4</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box5">box 5</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box6">box 6</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box7">box 7</a>
+		</div>
+		<div class="box flex-cm">
+			<a role="button" href="#box8">box 8</a>
+		</div>
+	</div>
+<script src="js/03-clickEventHandling.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-gallery-container {
+  display: flex;
+  width: 805px;
+  flex-direction: row-reverse;
+}
+
+.photo-gallery-control {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+}
+.photo-gallery-control a {
+  flex: 0 0 200px;
+  /*margin-bottom: 10px;*/
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in;
+}
+
+.photo-gallery-control a:hover,
+.photo-gallery-control a:focus {
+  opacity: 1;
+  outline: 5px solid #17100f;
+}
+
+.photo-gallery-control img {
+  vertical-align: top;
+}
+
+.photo-gallery-view {
+  flex: 1;
+}

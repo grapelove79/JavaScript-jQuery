@@ -4,6 +4,7 @@
 - for문
 - for ~ in문
 - function
+
 ---
 
 ## for문
@@ -38,7 +39,7 @@ for (var a in data_collections) {
 }
 ```
 
-### `for ~ in문` : CSS 스타일 적용
+### [미션] `for ~ in문` : CSS 스타일 적용
 - 1. 문서(document)에서 `.target-element`를 찾아 변수에 할당(적절한 변수 이름 작성)
 - 1-2. 이벤트를 제어할 버튼 요소를 문서에서 찾아 변수에 할당 (적절한 변수 이름 작성)
 - 1-3. 설정할 CSS 객체를 선언과 동시에 값으로서 객체를 정의 
@@ -89,7 +90,7 @@ function assignCSSObject() {
 }
 ```
 
-### `for ~ in문` : 사이드 메뉴의 각 링크 `<a>`를 클릭하는 이벤트 처리
+### [미션] `for ~ in문` : 사이드 메뉴의 각 링크 `<a>`를 클릭하는 이벤트 처리
 - 1. 문서에서 nav.side-menu 요소 객체를 찾아 변수에 참조
 - 2. 참조된 사이드 메뉴 내부에서 <a> 요소를 모두 찾아 변수에 참조
 - 3. for 문을 사용하여 <a>의 집합을 순환 처리
@@ -170,7 +171,7 @@ var lookAt = function(){
 };
 ```
 
-### 메시지 출력
+### [미션] 메시지 출력
 ```html 
   <div class="ironman">
     <p class="message">message</p>

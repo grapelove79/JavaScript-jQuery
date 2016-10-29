@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>DAY06 - 자바스크립트 반복문 - for in</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <style>
+    body {
+      margin: 10rem;
+      font-size: 4rem;
+      font-family: "Lato", Sans-Serif;
+    }
+    code {
+      border-radius: 4px;
+      padding: 0.1em 0.2em;
+      background: #f3f3f3;
+      /*font-family: inherit;*/
+    }
+    .target-element {
+      width: 200px;
+      padding: 1em;
+    }
+    .btn-assign-css-object {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      padding: 1em;
+      background: #000;
+      color: #fff;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      max-width: 400px;
+    }
+    .side-menu ul {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-around;
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      min-height: 100vh;
+      background: #fff;
+    }
+    .side-menu li {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #ececec;
+    }
+/*    .side-menu li:first-child { 
+      background: #FF23F7; 
+    }
+    .side-menu li:nth-child(2n) { 
+      background: #FFF00E; 
+    }
+    .side-menu li:nth-child(3n) { 
+      background: #30FFFB; 
+    }
+    .side-menu li:last-child { 
+      background: #FF670E; 
+    }*/
+    .side-menu a {
+      display: block;
+      padding: 0.3em 1.5em;
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.4rem;
+      transition: color 0.4s ease-out;
+    }
+    .side-menu a:hover,
+    .side-menu a:focus {
+      color: 940;
+    }
+  </style> 
+</head>
+<body>
+	<!-- href => IE8+이상에만 적용 -->
+	<nav class="side-menu">
+		<ul>
+			<!-- <li><a href="" bgcolor>Intro</a></li> : 커스텀 속성을 넣을 땐 'data-' 넣어주면 된다. 
+			bgcolor' 비표준, 'data-bg-color' 표준 -->
+			<li><a href="" data-bg-color="#FF23F7">Intro</a></li> 
+			<li><a href="" data-bg-color="#FFF00E">About</a></li>
+			<li><a href="" data-bg-color="#30FFFB">Contact</a></li>
+			<li><a href="" data-bg-color="#FF670E">Reference</a></li>
+		</ul>
+	</nav>
+<script src="js/03-for-in.js"></script>
+</body>
+</html>

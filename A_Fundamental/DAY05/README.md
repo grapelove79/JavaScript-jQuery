@@ -4,6 +4,7 @@
 - switch
 - while
 - do while
+- for
 - 오늘은 어떤 요일 일까?
 - Simple Photo Gallery
 

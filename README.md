@@ -22,10 +22,15 @@
 - [DAY04](./A_Fundamental/DAY04/README.md)
 	- 올바른 데이터 유형을 체크하는 방법
 	- 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수
-	- 문서객체가 존재하는지 여부를 확인하는 `checkDOMElement` 헬퍼 함수
+	- 문서객체가 존재하는지 여부를 확인하는 `checkDOMElement()` 헬퍼 함수
 	- 조건문(Conditional statement)
 	- console {}
-
+- [DAY05](./A_Fundamental/DAY05/README.md)
+	- switch, while, do while, for
+	- Simple Photo Gallery
+- [DAY06](./A_Fundamental/DAY06/README.md)
+	- for문 VS for ~ in문
+	- function
 
 ---
 

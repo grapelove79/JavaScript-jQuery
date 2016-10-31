@@ -17,9 +17,9 @@
  	console.log('내부 - creation:', creation);
  }());
  	console.log('외부 - creation:', creation); // creation is not defined
-```턴
+```
 
-## 메소드 빌려쓰기 패
+## 메소드 빌려쓰기 패턴
 - `.call()`, `.apply()`는 기능면에서는 유사하나, 전달 인자의 개수가 2개 이상일 때, `.call()`의 경우 낱개로 전달
 - `.apply()`의 경우는 배열 유형으로 전달
 
@@ -115,7 +115,7 @@ borderRadious('6px') // 6px로 들어감.
 - 이벤트핸들링
 
 ### 작성한 헬퍼 함수를 사용하여 문서객체 생성/조작/이벤트 핸들링
-#### `<article>` 동적 생성 
+#### 1. `<article>` 동적 생성 
 
 ```javascript
 (function(global) {    
@@ -135,7 +135,7 @@ borderRadious('6px') // 6px로 들어감.
 }(this));
 ```
 
-#### 2초후 `<main>` 동적 생성
+#### 2. 2초후 `<main>` 동적 생성
 
 ```javascript
 (function(global) {

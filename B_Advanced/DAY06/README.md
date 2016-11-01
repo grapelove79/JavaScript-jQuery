@@ -20,34 +20,34 @@
 - 어떻게 객체를 생성할 것인가?
 
 ### 객체의 종류
-1. 언어에 내장된 객체(Native Objects)
-ㄴ 원시 유형 : String, Number, Boolean
-ㄴ 참조 유형 : Object, Function, Array
+1. 언어에 내장된 객체(Native Objects) 
+	- `원시 유형` String, Number, Boolean
+	- `참조 유형` Object, Function, Array
 
 2. 언어차원에서 지원하는 라이브러리 객체
-: Math, RegExp, Date, ...
+	- Math, RegExp, Date, ...
 
 3. 웹 브라우저에 정의된 객체(Browser Object Model) : BOM
-- window {}
-- screen {}
-- navigator {}
-- location {}
-- history {}
+	- window {}
+	- screen {}
+	- navigator {}
+	- location {}
+	- history {}
 
 4. 사용자 정의 객체(Custom, User Defined Objects)
-- Creational Pattern
-- Object Literal
-- Constructor, Prototype
-- Object.create()
-- class 
+	- Creational Pattern
+	- Object Literal
+	- Constructor, Prototype
+	- Object.create()
+	- class 
 
 ### 데이터 유형을 검증
 1. typeof
 : `null`, `[]` 유형을 올바르게 체크해주지 않는다.
 
-2. 생성된 객체의 생성자를 판단하는 코드 `instanceof`, `.constructor`
-	2-1. `instanceof` : 원시 데이터 유형의 경우는 올바르게 체크해주지 않는다. `객체 instanceof 생성자(함수)`
-	2-2. `.constructor` : 객체가 아닌 유형의 경우에서는 사용 불가 `객체.constructor === 생성자 (함수)`
+2. 생성된 객체의 생성자를 판단하는 코드 `instanceof`, `.constructor`<br>
+	2-1. `instanceof` : 원시 데이터 유형의 경우는 올바르게 체크해주지 않는다. `객체 instanceof 생성자(함수)`<br>
+	2-2. `.constructor` : 객체가 아닌 유형의 경우에서는 사용 불가 `객체.constructor === 생성자 (함수)`<br>
 
 ```javascript
 var kor, jap;

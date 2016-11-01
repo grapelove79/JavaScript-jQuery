@@ -54,3 +54,16 @@
 	- DOM Helper Functions
 		- Utility Helper Functions
 		- [DOM API] Selection, Creation, Manipulation
+- [DAY05](./B_Advanced/DAY05/README.md)
+	- IIFE 즉시 실행함수 패턴
+	- call(), apply() 매소드 빌려쓰기 패턴
+	- arguments
+	- ECMASCript 6 Edition (ECMAScript 2015)
+- [DAY06](./B_Advanced/DAY06/README.md)
+	- 자바스크립트 프로그래밍 방법론
+	- 객체의 종류
+	- 데이터 유형을 검증
+		- `typeof` vs `instanceof` vs `.constructor`
+	- 네임스페이스(Namespace)
+	- for문 VS forEach문
+	- 정규 표현식

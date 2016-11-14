@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>문서객체 조작/제어 이벤트 처리 함수형 프로그래밍 → 객체형 프로그래밍으로 변경</title>
+  <script src="dom_helper/main.js"></script>
+  <script src="dom_helper/modules/selection.js"></script>
+  <script src="dom_helper/dom_helper.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <!-- 유물(Legacy) 방식의 인라인 스크립팅 -->
+      <a
+        href="#showMeTheMoney"
+        data-url="./dataset/link-0/"
+        onclick="window.alert(this.getAttribute('data-url')); return false;">link element.</a>
+    </div>
+    <div class="row">
+      <a
+        href="#link1"
+        onclick="window.alert(this.getAttribute('href')); return false;"
+      >link element.</a>
+    </div>
+    <div class="row">
+      <a
+        href="#link2"
+        onclick="window.alert(this.getAttribute('href')); return false;"
+      >link element.</a>
+    </div>
+    <div class="row">
+      <a
+        href="#link3"
+        onclick="window.alert(this.getAttribute('href')); return false;"
+      >link element.</a>
+    </div>
+    <div class="row">
+      <a
+        href="#link4"
+        onclick="window.alert(this.getAttribute('href')); return false;"
+      >link element.</a>
+    </div>
+  </div>
+
+<script>
+(function(global, $){
+  'use strict';
+  
+  // 라이브러러 객체의 util 네임스페이스 객체의 메소드
+  // 지역 변수에 참조
+  var util = $.util;
+  var cLog = util.cLog;
+
+  // 스타일 변경
+  cLog.styles = [
+    'color: #34c0ff;',
+    'font-size: 1.1rem;',
+    'letter-spacing: 0.04em;'
+  ].join('');
+
+  cLog('this is %cLibrary.');
+  cLog('util type is object? %c' + util.isObject( util ) ); // false
+
+// --------------------------------------------------------
+
+  var container = $.query('.container');
+  var row_links = $.queryAll('.row a', container);
+
+  // console.log('container:', container);
+  // cLog('container element is %c' + container);
+  // console.log('rows:', rows);
+
+  // console.log(util.isNodeList(rows)); // true
+
+  // rows = util.makeArray(rows);
+
+  // console.log(util.isNodeList(rows)); // false
+  // console.log(util.isArray(rows)); // true
+
+  // ------------------------------------------------------
+  // DOM_Helper.util.makeArray 검토
+  // function demoFn() {
+  //   console.log('arguments:', arguments);
+  //   console.log('is array?:', util.isArray(arguments));
+  //   var args = util.makeArray(arguments);
+  //   console.log('is array?:', util.isArray(args));
+  // }
+
+  // demoFn(1, 3, 5, 7, 8);
+  // ------------------------------------------------------
+  // DOM_Helper.each 검토
+
+  $.each(row_links, function(index, link){
+    /**
+     * ----------------------------------------
+     * Legacy DOM (DOM Lv0)
+     * 이벤트 속성에 하나의 이벤트 핸들러만 연결이 가능하다!
+     * ----------------------------------------
+     */
+
+    // link.onclick = assignParentActiveClass;
+    // link.onclick = stylingParentChangeBGColor;
+    // link.onclick = [assignParentActiveClass, stylingParentChangeBGColor];
+    // link.onclick = function() {
+    //   // 함수 리터럴로 실행하고자 하는 함수들을 묶었을 때
+    //   // this가 참조하는 실행 객체를 임의로 설정해줘야 하는 불편함이 있다.
+    //   assignParentActiveClass.call(this);
+    //   stylingParentChangeBGColor.call(this);
+    // };
+
+    /**
+     * ----------------------------------------
+     * DOM Lv2, W3C Standard Event Model (2000)
+     * .addEventListener(type, handler, capture)
+     * 이벤트 타입에 다수의 이벤트 핸들러 연결이 가능하다!
+     * ----------------------------------------
+     */
+
+    link.addEventListener('click', assignParentActiveClass, false);
+    link.addEventListener('click', stylingParentChangeBGColor, false);
+    // $.on( link, 'click mouseenter focus', assignParentActiveClass );
+  });
+
+  function assignParentActiveClass(){
+    this.parentNode.classList.add('active');
+    // 브라우저 기본 동작 차단
+    return false;
+  }
+
+  function stylingParentChangeBGColor() {
+    this.parentNode.style.backgroundColor = '#ffd219';
+  }
+})(this, this.DOM_Helper);
+
+//--------------------------------------------------------------
+
+/**
+ * --------------------------------
+ * new Audio()
+ * --------------------------------
+ */
+
+(function(global){
+  'use strict';
+
+  var audio = new Audio();
+  audio.src = 'media/myturn.mp3';
+
+  console.log(audio);
+
+  audio.oncanplay = function() {
+    this.play();
+    global.setTimeout(function() {
+      audio.oncanplay = null;
+      console.log(audio.oncanplay);
+    }, 100);
+  };
+})(this);
+
+</script>
+</body>
+</html>

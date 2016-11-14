@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Earphones &amp; Earset 3i - Carousel UI Component -</title>
+  <!-- 캐로셀 스타일 -->
+  <link rel="stylesheet" href="css/carousel-ui-component.css">
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/fav-icon32x32px.png">  
+</head>
+<body>
+
+  <article class="carousel-container">
+    <h1 class="readable-hidden">Earphones &amp; Earset 3i Carousel Component</h1>
+    <div class="carousel-controls">
+      <div class="carousel-indicator">
+        <button type="button" class="ir carousel-tab">product view 01</button>
+        <button type="button" class="ir carousel-tab">product view 02</button>
+        <button type="button" class="ir carousel-tab">product view 03</button>
+        <button type="button" class="ir carousel-tab">product view 04</button>
+      </div>
+      <div class="carousel-navigator">
+        <button type="button" class="ir carousel-previous-btn">previous product view</button>
+        <button type="button" class="ir carousel-next-btn">next product view</button>
+      </div>
+    </div>
+    <div class="carousel-view clearfix">
+      <img class="active-view" src="images/01.jpg" alt="product 01" width="1506" height="920">
+      <img src="images/02.jpg" alt="product 02">
+      <img src="images/03.jpg" alt="product 03">
+      <img src="images/04.jpg" alt="product 04">
+    </div>
+  </article>
+
+<script src="js/carousel-ui-component.js"></script>
+<script>
+
+  /**
+   * --------------------------------
+   * Inline Style 적용
+   * --------------------------------
+   */
+  
+  // 문서의 객체를 찾는다.
+  // var body = document.querySelector('body');
+
+  // 방식1. 여려 줄로 적용
+  // body.style.fontSize = '32px';
+  // body.style.margin = '3em';
+  // body.style.padding = '2em 4em';
+  // body.style.color = '#0459FF';
+
+  // 방식2. 한번에 스타일 적용
+  // 최신 버전의 자바스크립트 - 크로스브라우징 안됨
+  // body.style.cssText = `
+  //   font-size : 32px;
+  //   margin: 3rem;
+  //   padding: 2em 4em;
+  //   color: #333;
+  // `;
+
+  // 방식3. 하위 호환을 위해서라면 
+  // body.style.cssText = 'font-size: 32px; margin: 3rem; padding: 2em 4em; color: #333;';
+
+  // 방식4. 여러 줄로 사용하려면 배열을 사용
+  // body.style.cssText = [
+  //   'font-size : 32px;',
+  //   'margin: 3rem;',
+  //   'padding: 2em 4em;',
+  //   'color: #333;'
+  // ].join('');
+
+</script>
+</body>
+</html>

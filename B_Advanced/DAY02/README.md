@@ -1,5 +1,7 @@
 ###### JJ_CAMP_Advanced
 
+[＜ INDEX](../../README.md)
+
 ## DAY 02
 - 브라우저 객체 모델(BOM : Browser Object Model)
 	- window.screen

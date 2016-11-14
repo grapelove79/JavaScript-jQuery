@@ -1,5 +1,7 @@
 ###### JJ_CAMP_Fundamental
 
+[＜ INDEX](../../README.md)
+
 ## DAY 03
 
 ## 데이터 유형 변경

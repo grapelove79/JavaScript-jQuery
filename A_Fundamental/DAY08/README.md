@@ -1,5 +1,7 @@
 ###### JJ_CAMP_Fundamental
 
+[＜ INDEX](../../README.md)
+
 ## DAY 08
 - Inline Style 적용
 - `.clientWidth`, `.style.width`, `.getComputedStyle(요소).width`, `.currentStyle.width`

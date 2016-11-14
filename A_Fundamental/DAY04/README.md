@@ -1,5 +1,7 @@
 ###### JJ_CAMP_Fundamental
 
+[＜ INDEX](../../README.md)
+
 ## DAY 04
 - 올바른 데이터 유형을 체크하는 방법
 - 데이터 유형을 올바르게 체크해주는 `isDataType()` 헬퍼 함수

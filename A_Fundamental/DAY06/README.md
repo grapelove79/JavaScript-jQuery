@@ -1,5 +1,7 @@
 ###### JJ_CAMP_Fundamental
 
+[＜ INDEX](../../README.md)
+
 ## DAY 06
 - for문
 - for ~ in문

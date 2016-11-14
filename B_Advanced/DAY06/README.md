@@ -1,5 +1,7 @@
 ###### JJ_CAMP_Advanced
 
+[＜ INDEX](../../README.md)
+
 ## DAY 06
 - 자바스크립트 프로그래밍 방법론
 - 객체의 종류

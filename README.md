@@ -31,7 +31,13 @@
 - [DAY06](./A_Fundamental/DAY06/README.md)
 	- for문 VS for ~ in문
 	- function
-
+- [DAY07](./A_Fundamental/DAY07/README.md)
+	- Audio (HTML5) 
+	- UI Components `carousel` - 1
+- [DAY08](./A_Fundamental/DAY08/README.md)
+	- Inline Style 적용
+	- clientWidth
+	- UI Components `carousel` - 2 완성
 ---
 
 ##Advanced
@@ -67,3 +73,9 @@
 	- 네임스페이스(Namespace)
 	- for문 VS forEach문
 	- 정규 표현식
+- [DAY07](./B_Advanced/DAY07/README.md)
+	- Event Capture vs Bubble
+	- stopImmediatePropagation()
+- [DAY08](./B_Advanced/DAY08/README.md)
+	- jQuery와 유사한 라이브러리 `Like jQuery`
+	- Ajax-SPA(Native JavaScript AJAX 방식)

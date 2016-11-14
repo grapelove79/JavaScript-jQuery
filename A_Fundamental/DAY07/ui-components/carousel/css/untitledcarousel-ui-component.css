@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* web-font */
+.novaT { font-family: "proximanova thin"; }
+.novaR { font-family: "proximanova regular"; }
+.novaB { font-family: "proximanova bold"; }
+
+/* common */
+.readable-hidden {
+	overflow: hidden;
+	position: absolute;
+	width:    1px;
+	height:   1px;
+	margin:   -1px;
+	border:   0;
+	padding:  0;
+}
+
+.readable-hidden.focusable:focus {
+	overflow: visible;
+	position: static;
+	clip:     auto;
+	width:    auto;
+	height:   auto;
+	margin:   0;
+}
+
+.ir {
+	overflow: hidden;
+	text-indent: -9999em;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* initialization */
+html {
+	overflow-y: scroll; /* ui축을 움직 */
+	/* 폰트 안티엘리어싱 */
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px px rgba(0,0,0,0.004);
+}
+
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* carousel-component-ui */
+.carousel-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 800px;
+	overflow-x: scroll;
+	outline: 3px solid #dedede;
+}
+.carousel-container img {
+  width: 100vw;
+  height: auto;
+}
+
+.carousel-container button {
+	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+
+/* outline : apple 사용하는 스타일, 사용 이유: 녹음3; */
+.carousel-container button:focus {
+	outline: none;
+	outline-offset: 0.3em;
+	box-shadow: 0 0 0 2px hsla(198, 82%, 47%, 0.32);
+}
+
+/* carousel-indicator */
+.carousel-indicator button {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #696966;
+	transition: all .3s ease-out;
+}
+
+.carousel-indicator button:hover {
+	background: #323232;
+}
+
+.carousel-indicator button:active {
+	outline-offset: 0.3em;
+	box-shadow: 0 0 0 4px hsla(78%, 82%, 67%, 0.2);
+}
+
+/* carousel-navigation */
+.carousel-navigation button {
+	position: relative;
+	top: 50%;
+	transform: translate(-50%);
+	width: 34px;
+	height: 34px;
+	background: #212121;
+	border-radius: 50%;
+}
+
+.carousel-navigation .carousel-previouse-btn { left: 20px; }
+.carousel-navigation .carousel-next-btn { right: 20px; }
+
+.carousel-navigation button::before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 16px;
+	height: 16px;
+	transform: translate(-50%, -50%) rotate(-45deg); /* 가운데 정렬  */
+	opacity: 0.7;
+}
+
+.carousel-navigation button:hover::before {
+	opacity: 1;
+}
+
+.carousel-navigation .carousel-previouse-btn::before {
+	border-top: 5px solid #fff;
+	border-left: 5px solid #fff;
+}
+
+.carousel-navigation .carousel-next-btn::before {
+	border-right: 5px solid #fff;
+	border-bottom: 5px solid #fff;
+}
+
+.carousel-view img {
+	float: left;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>자바스크립트 함수</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ironman">
+    <p class="message">message</p>
+    <button type="button" class="ironman-print-button">
+      <img src="images/ironman.png" alt="ironman" width="256" height="256">
+    </button>
+    
+    <p class="play-sound-title">play-sound-title</p>
+
+    <button class="sound-control-button fa fa-play-circle" title="재생 버튼" aria-label="재생"></button>
+    <button class="sound-control-button fa fa-pause-circle" title="일시정지 버튼" aria-label="일시정지"></button>
+    <button class="sound-control-button fa fa-stop-circle" title="정지 버튼" aria-label="정지"></button>
+  </div>
+
+  <!-- 
+  * audio : HTML 5 Audio
+    - autoplay : 자동 재생. 웹접근성에서 관점에서 좋지 않다. '인식의 용의성' 지침에 좋지 않다. 3초 이상
+    - controls : 사용자가 제어 가능한 컨트롤러 화면에 표시.
+    - loop : 반복 횟수 설정
+  -->  
+  <!-- <audio src="media/myturn.mp3" autoplay> -->
+  <!-- <audio src="media/myturn.mp3" controls loop="2"> -->
+  <!-- <audio src="media/myturn.mp3" autoplay>
+    <a href="media/myturn.mp3">myturn.mp3</a>
+  </audio> -->
+
+  <!-- audio element를 동적으로 추가 -->  
+
+<script src="js/01-print-message-ironman.js"></script>
+<script src="js/01-sound-control-ironman.js"></script>
+</body>
+</html>

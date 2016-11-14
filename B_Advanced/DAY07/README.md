@@ -2,6 +2,7 @@
 
 ## DAY 07
 - Event Capture vs Bubble
+- stopImmediatePropagation()
 
 ## Event 
 `Legacy DOM (DOM Lv0)` <br>

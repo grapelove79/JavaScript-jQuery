@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jquery와 유사한 라이브러리</title>
+  <style>
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    .activation {
+      color: #7045cf;
+    }
+    .activation:focus {
+      outline: none;
+      outline-offset: 5px;
+      box-shadow: 0 0 0 3px hsla(199, 100%, 60%, 0.45);
+    }
+  </style>
+</head>
+<body>
+  
+<!-- nav.demo>ul>li*6>a{link $@1m} -->
+
+<nav class="demo">
+    <ul>
+        <li><a class="demo-links" href="">link 1m</a></li>
+        <li><a href="">link 2m</a></li>
+        <li><a class="demo-links" href="">link 3m</a></li>
+        <li><a href="">link 4m</a></li>
+        <li><a class="demo-links" href="">link 5m</a></li>
+        <li><a href="">link 6m</a></li>
+    </ul>
+</nav>
+
+<script src="js/Element.prototype.js"></script>
+
+<script>
+(function( global ) {
+    'use strict';
+
+    /**
+     * --------------------------------
+     * ex1. 이벤트 위임
+     * --------------------------------
+     */
+
+    // var nav = document.querySelector('nav');
+    // // console.log( nav.addClass('gnb'));
+
+    // var li_first = nav.addClass('gnb')
+    //                   .querySelector('ul')
+    //                   .addClass('clearfix reset-list')
+    //                   .querySelectorAll('li')
+    //                   .item(1)
+    //                   .addClass('active');
+    
+    // li_first.addEventListener('click', function(e) {
+    //     if ( event.target.nodeName === 'A' ) { event.preventDefault(); }
+    //     console.log(this.hasClass('active')); 
+    //     console.log('this', this); // li.active
+    //     console.log('event.target', event.target); // a
+    //     console.log('event.currentTarget', event.currentTarget); // li.active
+    //     event.target.toggleClass('active');
+    // }, false);
+
+    /**
+     * ------------------------------------------------------------
+     * ex2. 부모 요소에 이벤트를 한 번 걸어 줌에 따라 모든 자손들은 이벤트가 전파. 
+     * 이를 `이벤트 위임`이라고 부른다.
+     * ------------------------------------------------------------
+     */
+
+     var nav = document.querySelector('nav');
+
+     nav.addEventListener('click', function(e) {
+        var node_name = e.target.nodeName.toLowerCase();
+        console.log(node_name);
+        // 브라우저 기본 동작 차단
+        if (node_name === 'a') { e.preventDefault(); }        
+        e.target.radioClass('activation');
+        // console.log('this:', this);
+        // console.log('e.target:', e.target);
+        // console.log('e.currentTarget:', e.currentTarget);
+    });
+})( this );
+</script>
+</body>
+</html>

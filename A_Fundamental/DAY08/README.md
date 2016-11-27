@@ -96,7 +96,19 @@ content-box + padding-box 까지 너비를 반환한다.<br>
 
 ---
 
-## UI Components `carousel`
+## UI Components `carousel` 
+
+### TO DO
+1. 대상 찾기
+2. view영역 내부의 `img`의 폭을 가져와서 이미지 개수만큼의 폭을 view영역에 설정
+3. `.carousel-view` 영역의 가로 폭을 포함하는 이미지 개수의 폭의 합 만큼 설정
+4. 각 이미지를 순환 처리하여 컨테이너 요소의 너비 만큼 이미지 너비를 설정
+5. 이전/다음 버튼 이벤트 연결
+    5-1. `이전 버튼` :  `선감소한 활성화된 인덱스`와 `이미지 개수`를 나머지 연산
+    5-2. `다음 버튼` : `선증가한 활성화된 인덱스`와 `이미지 개수`를 나머지 연산
+6. `indicator`를 사용자가 클릭 했을 때, 이벤트 발생하는 일
+    6-1. 이전에 활성화되었던 인디케이터는 비 활성화, 클릭한 인디케이터는 활성화
+    6-2. 뷰(`carousel-view`) 영역이 클릭한 인디케이터의 인덱스(순서)에 해당하는 위치로 이동
 
 ```html
   <article class="carousel-container">
@@ -125,7 +137,6 @@ content-box + padding-box 까지 너비를 반환한다.<br>
 ```
 
 ### indicator와 이전/다음 버튼 싱크
-#### 이전/다음 버튼 이벤트 연결
 ```javascript
   var prev_btn = controls.querySelector('.carousel-previous-btn');
   var next_btn = controls.querySelector('.carousel-next-btn');
@@ -200,12 +211,12 @@ GPU | 사용 함 | 사용 안함
 
     // 인디케이터를 클릭했을 때 활성화 인덱스도 변경(싱크 작업)
     active_index = item.index;
-    console.log('ind', active_index);
     view.style.transform = 'translateX('+ (-1 * distance) +'px)';
   }
   ```
 
 ### Code refactoring
+
 ```javascript
 window.onload = init;
 

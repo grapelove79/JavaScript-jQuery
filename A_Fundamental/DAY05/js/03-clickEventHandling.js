@@ -57,7 +57,7 @@ var box_buttons = container.querySelectorAll('a');
 // var i = 0, btn_len=box_buttons.length;
 // while( i<btn_len ) {
 // 	box_buttons[i].onclick = function() {
-// 		console.log(this)
+// 		console.log(this);
 // 	};
 // 	i++;
 // }
@@ -71,5 +71,5 @@ while( i<btn_len ) {
 }
 
 function actionButton() {
-	console.log(this)
+	console.log(this);
 };

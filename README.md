@@ -37,7 +37,7 @@
 - [DAY08](./A_Fundamental/DAY08/README.md)
 	- Inline Style 적용
 	- clientWidth
-	- UI Components `carousel` - 2 완성
+	- UI Components `carousel` - 2
 
 ---
 

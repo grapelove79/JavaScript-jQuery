@@ -237,7 +237,7 @@ function activeViewContent(tab, num) {
   }
   tab.classList.add('active-tab');
   selected_tab = tab;
-  view.style.left = -1numcontainer_width + 'px';
+  view.style.left = -1 * num * container_width + 'px';
 }
 
 // 애니메이션 컨트롤 - 시작

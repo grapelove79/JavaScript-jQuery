@@ -5,7 +5,7 @@
 ## DAY 08
 - Inline Style 적용
 - `.clientWidth`, `.style.width`, `.getComputedStyle(요소).width`, `.currentStyle.width`
-- UI Components `carousel`
+- UI Components `carousel` [DAY07 carousel refactoring](https://github.com/rockquai/JavaScript-jQuery/blob/master/A_Fundamental/DAY07/ui-components/carousel/js/carousel-ui-component.js)
 
 ---
 
@@ -97,6 +97,9 @@ content-box + padding-box 까지 너비를 반환한다.<br>
 ---
 
 ## UI Components `carousel` 
+- [DAY07 carousel refactoring](https://github.com/rockquai/JavaScript-jQuery/blob/master/A_Fundamental/DAY07/ui-components/carousel/js/carousel-ui-component.js)
+- indicator Abstract(추상화)
+- `인디케이터`와 `이전/다음 버튼` 싱크
 
 ### TO DO
 1. 대상 찾기

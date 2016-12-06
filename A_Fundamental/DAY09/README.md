@@ -4,10 +4,7 @@
 
 ## DAY 09
 - 객체 지향 JavaScript
-- 시간을 제어하는 전역 함수(Global Functions)
-- UI Components `carousel` (함수형 프로그래밍, 절차 지향)<br>
-	- 애니메이션 컨트롤<br>
-	- 키보드 접근성 : `인디케이터` 혹은 `이전/다음`에 키보드 포커싱 될때 애니메이션 멈춤
+- UI Components `carousel` [DAY08 carousel refactoring](https://github.com/rockquai/JavaScript-jQuery/blob/master/A_Fundamental/DAY08/ui-components/carousel/js/carousel-ui-component.js)
 
 ## [객체 지향 JavaScript 입문](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript) 
 1. 추상화(Abstract)
@@ -17,88 +14,11 @@
 
 ---
 
-## 시간을 제어하는 전역 함수(Global Functions)
-- window {} 객체의 메소드
-- `setInterval` 일정 주기(Interval) 마다 `반복`하여 실행되는 함수<br>
-  - while () {} 느낌<br>
-  - callback: 실행 함수<br>
-  - ms: 주기, 밀리초 (1초 === 1000밀리초)<br>
-  - `window.setInterval()` : 계속 실행. `cpu사용이 계속 됨`.<br>
-- `setTimeout` 특정 시간(Event)에 되면, `한 번` 실행되는 함수<br>
-  - if () {} 느낌<br>
-  - `window.setTimeout()` : 1회만 사용<br>
-
-```html
-  <div class="button-group">
-    <button type="button" class="play-ball-button">Play Moving Ball</button>
-    <button type="button" class="stop-ball-button">Stop Moving Ball</button>
-  </div>
-
-  <div class="ball"></div>
-````
-
-```javascript
-
-    function playAnimation( callback, time ) {
-      // callback = callback || return;
-      if ( callback === undefined ) { return; } // 함수 종료
-      // time = time || tiem = 1000;
-      if ( time === undefined ) { time = 1000; }
-      return window.setInterval( callback, time );
-    }
-
-    function stopAnimation(id) {
-      window.clearInterval(id);
-    }
-
-    // 초기 전역 변수 선언
-    var ball, play_ball_button, stop_ball_button, stop_anim;
-
-    // window load 상태가 완료되면, 실행
-    window.onload = initBallMoving;
-
-    // 초기 실행 함수 (무빙 볼 재생/정지, 애플리케이션 초기화)
-    function initBallMoving() {
-      // 컨트롤 할 문서 객체 각 변수에 참조
-      selectControlEls();
-      // 이벤트 핸들러 연결(Binding)
-      bindEventControlEls();
-    }
-
-    function selectControlEls() {
-      ball = document.querySelector('.ball');
-      play_ball_button = document.querySelector('.play-ball-button');
-      stop_ball_button = document.querySelector('.stop-ball-button');
-    }
-
-    function bindEventControlEls() {
-      play_ball_button.onclick = playBall;
-      stop_ball_button.onclick = stopBall;
-    }
-
-    function playBall() {
-      // ball 이동 (일정 주기마다 playBall 함수 실행)
-      stop_anim = playAnimation(movingBall, 100);
-    }
-
-    function stopBall() {
-      console.log('볼 무빙 중지');
-      stopAnimation(stop_anim);
-    }
-
-    function movingBall() {
-      var current_ball_pos_x = ball.offsetLeft;
-      console.log('before:', current_ball_pos_x);
-      ball.style.left = current_ball_pos_x + 10 + 'px';
-      console.log('after:', ball.offsetLeft);
-    }
-
-```
-
----
-
 ## UI Component `carousel` 
-: 캐러셀 컴포넌트 (함수형 프로그래밍, 절차 지향)
+- [DAY08 carousel refactoring](https://github.com/rockquai/JavaScript-jQuery/blob/master/A_Fundamental/DAY08/ui-components/carousel/js/carousel-ui-component.js)
+- 캐러셀 컴포넌트 (함수형 프로그래밍, 절차 지향)
+- 애니메이션 컨트롤
+- 키보드 접근성 : `인디케이터` 혹은 `이전/다음`에 키보드 포커싱 될때 애니메이션 멈춤
 
 ### 자동 애니메이션
 0. 재사용 가능한 공통 함수(Common Functions)
@@ -190,7 +110,7 @@ function selectCarouselControls() {
 
 // 캐러셀 뷰 영역의 너비 및 각 콘텐츠 너비 설정
 function settingViewContentsWidth() {
-  view.style.width = container_width tabs_total + 'px';
+  view.style.width = container_width  * tabs_total + 'px';
   for ( var k=0, j=view_contents.length; k<j; k++ ) {
     view_contents[k].style.width = container_width + 'px';
   }
@@ -206,7 +126,7 @@ function bindingEventsCarouselControlls() {
       activeViewContent( this, selected_num );
     };
 
-	 // 키보드 접근성 
+   // 키보드 접근성 
      //인디케이터 혹은 이전/다음이 키보드 포커싱 될때 멈춤
      tab.onfocus = stopCarousel;
   }

@@ -4,7 +4,7 @@
 
 ## DAY 10
 - Function
-- UI Components `carousel` (DAY09 carousel refactoring)
+- UI Components `carousel` [DAY09 carousel refactoring](https://github.com/rockquai/JavaScript-jQuery/blob/master/A_Fundamental/DAY09/ui-components/carousel/js/carousel-ui-component.js)
 
 ## Function
 - 랜덤 정수 반환 함수

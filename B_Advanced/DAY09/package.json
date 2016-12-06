@@ -1,0 +1,31 @@
+{
+  "name": "node.js_webpack",
+  "version": "1.0.0",
+  "description": "Node.js 환경에서 Webpack을 사용하여 ECMASCript 2015(ES6) 사용하기",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --port 9091",
+    "server": "webpack-dev-server --inline --port 9091",
+    "build": "webpack -p",
+    "clear": "rm -rf ./dist ./src/public/assets"
+  },
+  "keywords": [
+    "Node.js",
+    "Webpack",
+    "Babel",
+    "ECMASCript 2015",
+    "ES6"
+  ],
+  "author": "rockquai",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "jquery": "^3.1.1",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}

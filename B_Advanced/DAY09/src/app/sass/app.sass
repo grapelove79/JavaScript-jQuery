@@ -1,0 +1,26 @@
+@import ./modules/reset
+@import ./modules/grid-system
+
+$page-bg-color: #E9FF12
+
+.page
+	height: 150vh
+	background: rgba($page-bg-color, 0.7)
+
+	h1
+		color: #D700FF
+		font-size: 3rem
+
+	.wrapper
+		padding: 1rem
+
+	.javascript-library-frameworks 
+		margin-top: 0
+		padding-left: 0
+		
+		li::before
+			content: '━ '
+		a
+			display: inline-block
+			padding: 0.4em
+			color: #5F0A5E

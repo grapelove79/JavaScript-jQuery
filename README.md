@@ -38,7 +38,9 @@
 	- Inline Style 적용
 	- clientWidth
 	- UI Components `carousel` - 2
-
+- [DAY09](./A_Fundamental/DAY09/README.md)
+	- 시간을 제어하는 전역 함수(Global Functions)
+	- UI Components `carousel` - 3 (자동 애니메이션)
 ---
 
 ##Advanced
@@ -80,3 +82,5 @@
 - [DAY08](./B_Advanced/DAY08/README.md)
 	- jQuery와 유사한 라이브러리 `Like jQuery`
 	- Ajax-SPA(Native JavaScript AJAX 방식)
+- [DAY09](./B_Advanced/DAY09/README.md)
+	- JavaScript Bundler `Webpack`

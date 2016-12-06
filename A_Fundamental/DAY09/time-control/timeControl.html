@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>시간을 제어하는 전역 함수를 이용하여 애니메이션 구현</title>
+	<style>
+		html {
+			/*overflow-x: */
+		}
+	    body { margin: 0; }
+	    .button-group {
+	      margin: 1rem;
+	      padding-bottom: 1rem;
+	      border-bottom: 1px solid #dedede;
+	    }
+	    .ball {
+	      cursor: pointer;
+	      position: relative;
+	      width: 140px;
+	      height: 140px;
+	      border-radius: 70px;
+	      background: linear-gradient(0deg, rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
+	      box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4),
+	                  inset -2px -1px 40px rgba(0,0,0,0.4),
+	                  0 0 1px #333;
+	    }
+	    .ball:active {
+	      transform: scale(0.98);
+	    }
+	    .ball::after {
+	        content: "";
+	        width: 80px;
+	        height: 40px;
+	        position: absolute;
+	        left: 30px;
+	        top: 10px;
+	        background: linear-gradient(180deg, rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	        border-radius: 40px / 20px;
+	    }
+
+	</style>
+	<script>
+	/**
+	 * --------------------------------
+	 * ex1.
+	 * --------------------------------
+	 */
+		// function playAnimation( callback, time ) {
+		// 	return window.setInterval( callback, time );
+		// }
+
+		// function stopAnimation( id ) {
+		// 	window.clearInterval(id);
+		// }
+
+		// var ball, play_ball_button, stop_ball,button, stop_anim;
+
+		// // 초기 실행 함수 (무빙 재생/정치, 애플리케이션 초기화)
+		// function initBallMoving() {
+		// 	ball = document.querySelector('.ball');
+
+		// 	/**
+		// 	 * ------------------------------------------------
+		// 	 * clientLeft, offsetLetf => get. 값만 가져올 수 있다.
+		// 	 * ------------------------------------------------
+		// 	 */
+
+		// 		// console.dir(ball);
+		// 		// console.log('before', ball.clientLeft); // 0 
+		// 		// console.log('after', ball.offsetLeft); // 0
+
+		// 		// ball.style.transform = 'translateX(100p)';
+		// 		// ball.style.transform.split('(');
+
+
+		// 	/**
+		// 	 * --------------------------------
+		// 	 * position: left 
+		// 	 * --------------------------------
+		// 	 */
+		// 		// ball.style.position = 'relative';
+		// 		// ball.style.left = '20px';
+
+		// 	// 1. ball 한번 이동
+		// 	// movingBall();
+
+		// 	// 2. 일정 주기만큼 ball 이동
+		// 	// playAnimation(movingBall, 100);
+
+		// 	// 3. 이벤트 핸들러 연길(Binding)
+		// 	play_ball_button = document.querySelector('.play-ball-button');
+		// 	stop_ball_button = document.querySelector('.stop-ball-button');
+
+		// 	play_ball_button.onclick = playBall;
+		// 	stop_ball_button.onclick = stopBall;
+		// }
+
+		// function playBall() {
+		// 	// playAnimation값을 담을 수 있은 식별자. 'stop_anim'
+		// 	stop_anim = playAnimation(movingBall, 100);
+		// }
+
+		// function stopBall() {
+		// 	stopAnimation(stop_anim);
+		// }
+
+		// function movingBall() {
+		// 	// ball의 현재 위치 값은 얼마인가?
+		// 	// offsetLeft는?
+		// 	var current_ball_pos_x = ball.offsetLeft;
+		// 	console.log('after', current_ball_pos_x);
+
+		// 	ball.style.left = current_ball_pos_x + 10 + 'px';
+		// 	console.log('before', ball.style.left);
+		// }
+
+		// // initBallMoving(); //null
+		// // window load 상태가 왼료되면, 실행 
+		// window.onload = initBallMoving;
+
+	/**
+	 * --------------------------------
+	 * ex2. 리팩토링
+	 * --------------------------------
+	 */
+	    /////////////////////////////
+	    // 애니메이션 재생/정지 헬퍼 함수 //
+	    /////////////////////////////
+	    function playAnimation( callback, time ) {
+	      // callback = callback || return;
+	      if ( callback === undefined ) { return; } // 함수 종료
+
+	      // time = time || tiem = 1000;
+	      if ( time === undefined ) { time = 1000; }
+	      return window.setInterval( callback, time );
+	    }
+
+	    function stopAnimation(id) {
+	      window.clearInterval(id);
+	    }
+
+	    // -------------------------------------------------------------
+	    // 초기 전역 변수 선언
+	    var ball, play_ball_button, stop_ball_button, stop_anim;
+
+	    // window load 상태가 완료되면, 실행
+	    window.onload = initBallMoving;
+
+	    // 초기 실행 함수 (무빙 볼 재생/정지, 애플리케이션 초기화)
+	    function initBallMoving() {
+	      // 컨트롤 할 문서 객체 각 변수에 참조
+	      selectControlEls();
+	      // 이벤트 핸들러 연결(Binding)
+	      bindEventControlEls();
+	    }
+
+	    function selectControlEls() {
+	      ball = document.querySelector('.ball');
+	      play_ball_button = document.querySelector('.play-ball-button');
+	      stop_ball_button = document.querySelector('.stop-ball-button');
+	    }
+
+	    function bindEventControlEls() {
+	      play_ball_button.onclick = playBall;
+	      stop_ball_button.onclick = stopBall;
+	    }
+
+	    function playBall() {
+	      // ball 이동 (일정 주기마다 playBall 함수 실행)
+	      stop_anim = playAnimation(movingBall, 100);
+	    }
+
+	    function stopBall() {
+	      console.log('볼 무빙 중지');
+	      stopAnimation(stop_anim);
+	    }
+
+	    function movingBall() {
+	      var current_ball_pos_x = ball.offsetLeft;
+	      console.log('before:', current_ball_pos_x);
+	      ball.style.left = current_ball_pos_x + 10 + 'px';
+	      console.log('after:', ball.offsetLeft);
+	    }
+	</script>
+</head>
+<body>
+	<div class="button-group">
+		<button type="button" class="play-ball-button">Play Moving Ball</button>
+		<button type="button" class="stop-ball-button">Stop Moving Ball</button>
+	</div>
+
+	<div class="ball"></div>
+</body>
+</html>

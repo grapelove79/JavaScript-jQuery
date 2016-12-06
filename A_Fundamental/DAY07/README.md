@@ -17,9 +17,9 @@
 1. 문서(document)에 `<audio>` 객체(요소노드)를 `생성(create)`한다.
 2. 생성된 오디오 객체를 참조하고 잇는 변수 `ironman_audio_obj`에 `src`속성을 설정.
 3. 음원 소스를 `src`속성의 값으로 설정. 
-4. 음원을 설정하는 경로는 `HTML 파일 기준의 상대 위치 설정.
-5. 문서에서 `.ironman-print-button` 버튼 요소를 찾아 이벤트를 연결
-ㄴ 음원 `재생(play)`, `정지(pause)`, `정지(stop)` 함수 생성
+4. 음원을 설정하는 경로는 `HTML 파일 기준의 상대 위치` 설정.
+5. 문서에서 `.ironman-print-button` 버튼 요소를 찾아 이벤트를 연결.<br>
+   ㄴ> 음원 `재생(play)`, `정지(pause)`, `정지(stop)` 함수 생성
 
 ```html 
   <div class="ironman">
@@ -38,7 +38,7 @@
 ```javascript
 // 문서(document)에 <audio> 객체(요소노드)를 생성(create)한다.
 var ironman_audio_obj;
-  ironman_audio_obj = document.createElement('audio');
+    ironman_audio_obj = document.createElement('audio');
 
 // 생성된 오디오 객체를 참조하고 있는 변수 ironman_audio_obj에 src 속성을 설정.
 // 음원 소스를 src 속성의 값으로 설정.
@@ -46,9 +46,9 @@ var ironman_audio_obj;
 var playlist = [ 'myturn', 'special', 'wantone' ];
 
 var random_paly_index = getRandomNumber(playlist.length),
-  play_sound_path   = 'media/' + playlist[playlist.length - 1] + '.mp3',
-  play_sound_title  = document.querySelector('.play-sound-title');
-  ironman_audio_obj.setAttribute('src', play_sound_path);
+    play_sound_path   = 'media/' + playlist[playlist.length - 1] + '.mp3',
+    play_sound_title  = document.querySelector('.play-sound-title');
+    ironman_audio_obj.setAttribute('src', play_sound_path);
 
   // 1. HTML DOM 방식
   play_sound_title.innerHTML = play_sound_path;

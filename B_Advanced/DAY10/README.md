@@ -19,7 +19,7 @@
 
 #### 1. 문자열 포함 여부 확인
 ```html
-<p class="compare-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates facere, commodi.</p>
+<p class="compare-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 ```
 
 ##### 사용자 정의 `$.includes()` 유틸리티 메소드 사용
@@ -47,7 +47,7 @@
 	console.log('include_text_abc', include_text_abc); // 'abc' 문자열이 없기 때문에 false
 
 	var include_text_abc   = $.includes( $compare.text(), 'Lorem' );
-	console.log('include_text_abc', include_text_abc); // 'Lorem' 문자열이 없기 때문에 true
+	console.log('include_text_abc', include_text_abc); // 'Lorem' 문자열이 있기 때문에 true
 ```
 
 #### 2. 문자열 반복처리 반환
@@ -500,7 +500,7 @@
 	'use strict';
 	// console.log('jquery.fn.carousel', $.fn.carousel);
 
-	// 사용자 옵션 설
+	// 사용자 옵션 설정
 	$('#bs3-headphone').carousel({
 		'active_index'    : 0,
 		'usign_animation' : true,
@@ -510,19 +510,3 @@
 
 })(this, this.jQuery);
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

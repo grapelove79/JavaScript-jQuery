@@ -7,19 +7,19 @@
 - UI Components `carousel` (jQuery Plugin)
 
 ### jQuery Extenstion
-- utilitles (사용자 정의 유틸리티 메소드)
-	-`$.includes()` jquery.string.includes.js   : 문자열 포함 여부 확인
-	-`$.repeat()`   jquery.string.repeat.js     : 문자열 반복처리 반환
-	-`$.currency()` jquery.currency.js 		    : 통화(원)로 변경
-	-`$.includes()` jquery.cache.js 			: jQuery 인스턴스 캐시(1회만 생성)
-- plugins
+- utilitles (사용자 정의 유틸리티 메소드)<br>
+	-`$.includes()` jquery.string.includes.js   : 문자열 포함 여부 확인<br>
+	-`$.repeat()`   jquery.string.repeat.js     : 문자열 반복처리 반환<br>
+	-`$.currency()` jquery.currency.js 		    : 통화(원)로 변경<br>
+	-`$.includes()` jquery.cache.js 			: jQuery 인스턴스 캐시(1회만 생성)<br>
+- plugins<br>
 	-`$radioClass`  jquery.radioClass.js 		: `addClass` / `removeClass` 토글
 
 ---
 
 #### 1. 문자열 포함 여부 확인
 ```html
-<p class="compare-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates facere, commodi. Aspernatur modi odit sapiente incidunt vel, quasi, reiciendis suscipit unde quae! Molestiae amet, provident mollitia ratione aliquam temporibus nemo!</p>
+<p class="compare-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates facere, commodi.</p>
 ```
 
 ##### 사용자 정의 `$.includes()` 유틸리티 메소드 사용

@@ -37,7 +37,7 @@
 - [DAY08](./A_Fundamental/DAY08/README.md)
 	- Inline Style 적용
 	- clientWidth
-	- UI Components `carousel` - 2
+	- UI Components `carousel` - 2 (`인디케이터`와 `이전/다음 버튼` 싱크)
 - [DAY09](./A_Fundamental/DAY09/README.md)
 	- 시간을 제어하는 전역 함수(Global Functions)
 	- UI Components `carousel` - 3 (자동 애니메이션)
@@ -88,3 +88,6 @@
 	- Ajax-SPA(Native JavaScript AJAX 방식)
 - [DAY09](./B_Advanced/DAY09/README.md)
 	- JavaScript Bundler `Webpack`
+- [DAY10](./B_Advanced/DAY10/README.md)
+	- jQuery Extension
+	- UI Components `carousel` (jQuery Plugin)

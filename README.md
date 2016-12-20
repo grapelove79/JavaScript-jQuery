@@ -41,7 +41,7 @@
 - [DAY09](./A_Fundamental/DAY09/README.md)
 	- 시간을 제어하는 전역 함수(Global Functions)
 	- UI Components `carousel` - 3 (자동 애니메이션)
-- [DAY10](./A_Fundamental/DAY10/README.md)
+- [DAY10 - End](./A_Fundamental/DAY10/README.md)
 	- function
 	- UI Components `carousel` - 4 (사용자 옵션, 캐러셀 컴포넌트 높이 감지)
 	
@@ -69,7 +69,7 @@
 		- [DOM API] Selection, Creation, Manipulation
 - [DAY05](./B_Advanced/DAY05/README.md)
 	- IIFE 즉시 실행함수 패턴
-	- call(), apply() 매소드 빌려쓰기 패턴
+	- call(), apply() 메소드 빌려쓰기 패턴
 	- arguments
 	- ECMASCript 6 Edition (ECMAScript 2015)
 - [DAY06](./B_Advanced/DAY06/README.md)
@@ -88,6 +88,6 @@
 	- Ajax-SPA(Native JavaScript AJAX 방식)
 - [DAY09](./B_Advanced/DAY09/README.md)
 	- JavaScript Bundler `Webpack`
-- [DAY10](./B_Advanced/DAY10/README.md)
+- [DAY10 - End](./B_Advanced/DAY10/README.md)
 	- jQuery Extension
 	- UI Components `carousel` (jQuery Plugin)

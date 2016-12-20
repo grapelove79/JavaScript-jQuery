@@ -319,6 +319,9 @@
 7. 객체 지향 자바스크립트 방식으로 코드를 변경한다. (e.g: new Carousel('#bs3-headphone') )
 
 ```javascrpt
+	(function(global, $) {
+	'use strict';
+	
 	// 문서객체 참조
 	var document = global.document;
 
